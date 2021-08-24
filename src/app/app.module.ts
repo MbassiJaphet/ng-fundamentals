@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { EventsAppComponent } from './events-app.component';
+import { EventsListComponent } from './events-list/events-list.component';
+import { EventThumbnailComponent } from './event-thumbnail/event-thumbnail.component';
 
 @NgModule({
   imports: [
@@ -10,7 +12,9 @@ import { EventsAppComponent } from './events-app.component';
     AppRoutingModule
   ],
   declarations: [
-    EventsAppComponent
+    EventsAppComponent,
+    EventsListComponent,
+    EventThumbnailComponent
   ],
   providers: [],
   bootstrap: [EventsAppComponent]
