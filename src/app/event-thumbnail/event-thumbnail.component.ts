@@ -16,7 +16,7 @@ import { Component, Input, OnInit } from '@angular/core';
             <div>Price: \${{event?.price}}</div>
             <div *ngIf="event.location">
                 <span>Location: {{event?.location?.address}}</span>
-                <span class="pas-left">{{event?.location?.city}}, {{event.location?.country}}</span>
+                <span class="pad-left">{{event?.location?.city}}, {{event.location?.country}}</span>
             </div>
             <div *ngIf="event.onlineUrl">
               <span>Online URL: {{event?.onlineUrl}}</span>
@@ -26,7 +26,7 @@ import { Component, Input, OnInit } from '@angular/core';
   `,
   styles: [`
     .thumbnail { min-height: 210px; }
-    .pas-left { margin-left: 10px; }
+    .pad-left { margin-left: 10px; }
     .well div { color: #bbb; }
   `]
 })
