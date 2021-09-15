@@ -9,6 +9,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { EventService } from './shared/event.service';
 import { ToastrService } from './common/toastr.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
+import { Error404Component } from './error-page/error-page.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
     EventDetailsComponent,
     EventThumbnailComponent,
     NavBarComponent,
-    EventDetailsComponent
+    Error404Component
   ],
   providers: [EventService, ToastrService],
   bootstrap: [EventsAppComponent]
