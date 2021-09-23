@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Error404Component } from './error-page.component';
+import { Error404Component } from './error-404.component';
 
 describe('ErrorPageComponent', () => {
   let component: Error404Component;

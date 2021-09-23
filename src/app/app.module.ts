@@ -9,7 +9,7 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { EventService } from './events/shared/event.service';
 import { ToastrService } from './common/toastr.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
-import { Error404Component } from './error-page/error-page.component';
+import { Error404Component } from './errors/error-404/error-404.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { CreateEventComponent, checkDirtyState } from './events/create-event.component';
 import { EventListResolver } from './events/events-list-resolver.service';
