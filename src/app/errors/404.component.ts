@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
-  selector: 'error-page',
   template: `
     <h1 class="errorMessage">404'd</h1>
   `,
@@ -10,13 +9,11 @@ import { Component, OnInit } from '@angular/core';
       margin-top:150px; 
       font-size: 170px;
       text-align: center; 
-    }`],
-  })
-  export class Error404Component implements OnInit {
+    }`]
+})
+export class Error404Component{
+  constructor() {
 
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
 }
