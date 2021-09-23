@@ -8,7 +8,7 @@ import { CreateEventComponent } from './events/create-event.component';
 
 const routes: Routes = [
   { path: 'events', component: EventsListComponent },
-  { path: 'events/new', component: CreateEventComponent },
+  { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
   { path: 'events/:id', component: EventDetailsComponent, canActivate: [EventRouteActivator]},
   { path: '', redirectTo: 'events', pathMatch: 'full'},
   { path: '404', component: Error404Component},

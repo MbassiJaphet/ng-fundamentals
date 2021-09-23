@@ -19,7 +19,14 @@ export class CreateEventComponent {
   constructor(private router: Router) {
 
   }
+
   cancel() {
     this.router.navigate(['/events'])
   }
+}
+
+export function checkDirtyState(component: CreateEventComponent) {
+    if (component.isDirty)
+        return window.confirm('You have not saved this event, do you really want to cancel ?');
+    else return true;
 }
