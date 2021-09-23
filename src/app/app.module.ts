@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { appRoutes } from './routes';
-import { NavBarComponent } from './shared/index';
-import { EventService } from './events/shared/index';
-import { Error404Component } from './errors/index';
+import { NavBarComponent } from './shared';
+import { EventService } from './events/shared';
+import { Error404Component } from './errors';
 
 import {
   EventsListComponent,
@@ -15,7 +15,7 @@ import {
   checkDirtyState,
   EventListResolver,
   EventRouteActivator,
-} from './events/index';
+} from './events';
 
 import { ToastrService } from './common/toastr.service';
 import { EventsAppComponent } from './events-app.component';
