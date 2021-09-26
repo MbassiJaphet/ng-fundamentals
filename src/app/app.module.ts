@@ -20,10 +20,12 @@ import {
 import { ToastrService } from './common/toastr.service';
 import { EventsAppComponent } from './events-app.component';
 import { AuthService } from './user/shared/auth.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [
