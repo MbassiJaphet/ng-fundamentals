@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { appRoutes } from './routes';
 import { NavBarComponent } from './shared';
-import { EventService } from './events/shared';
+import { DurationPipe, EventService } from './events/shared';
 import { Error404Component } from './errors';
 
 import {
@@ -41,6 +41,7 @@ import { CollapsibleWellComponent, ToastrService } from './common';
     CreateSessionComponent,
     NavBarComponent,
     CollapsibleWellComponent,
+    DurationPipe,
     Error404Component
   ],
   providers: [
