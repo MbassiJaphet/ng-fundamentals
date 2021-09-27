@@ -12,6 +12,7 @@ export class EventDetailsComponent implements OnInit {
 
   public event!: IEvent;
   public addMode: boolean = false;
+  public filterBy: String = 'all';
   constructor(private eventService: EventService,
               private route: ActivatedRoute) { }
 
