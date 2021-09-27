@@ -22,6 +22,7 @@ import { ToastrService } from './common/toastr.service';
 import { EventsAppComponent } from './events-app.component';
 import { AuthService } from './user/shared/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SessionListComponent } from './events/event-details/session-list/session-list.component';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EventsListComponent,
     EventDetailsComponent,
     EventThumbnailComponent,
+    SessionListComponent,
     CreateEventComponent,
     CreateSessionComponent,
     NavBarComponent,
