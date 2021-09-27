@@ -11,6 +11,7 @@ import {
   EventsListComponent,
   EventThumbnailComponent,
   EventDetailsComponent,
+  SessionListComponent,
   CreateEventComponent,
   checkDirtyState,
   EventListResolver,
@@ -18,11 +19,10 @@ import {
   CreateSessionComponent,
 } from './events';
 
-import { ToastrService } from './common/toastr.service';
 import { EventsAppComponent } from './events-app.component';
 import { AuthService } from './user/shared/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SessionListComponent } from './events/event-details/session-list/session-list.component';
+import { CollapsibleWellComponent, ToastrService } from './common';
 
 @NgModule({
   imports: [
@@ -40,6 +40,7 @@ import { SessionListComponent } from './events/event-details/session-list/sessio
     CreateEventComponent,
     CreateSessionComponent,
     NavBarComponent,
+    CollapsibleWellComponent,
     Error404Component
   ],
   providers: [
