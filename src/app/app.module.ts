@@ -15,17 +15,19 @@ import {
   checkDirtyState,
   EventListResolver,
   EventRouteActivator,
+  CreateSessionComponent,
 } from './events';
 
 import { ToastrService } from './common/toastr.service';
 import { EventsAppComponent } from './events-app.component';
 import { AuthService } from './user/shared/auth.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [
@@ -34,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     EventDetailsComponent,
     EventThumbnailComponent,
     CreateEventComponent,
+    CreateSessionComponent,
     NavBarComponent,
     Error404Component
   ],
