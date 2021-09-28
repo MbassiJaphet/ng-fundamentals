@@ -24,6 +24,7 @@ import { AuthService } from './user/shared/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapsibleWellComponent, TOASTR_TOKEN, Toastr } from './common';
 
+declare let jQuery: any;
 declare let toastr: Toastr;
 
 @NgModule({
