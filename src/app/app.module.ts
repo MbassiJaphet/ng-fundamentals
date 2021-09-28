@@ -22,7 +22,9 @@ import {
 import { EventsAppComponent } from './events-app.component';
 import { AuthService } from './user/shared/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CollapsibleWellComponent, ToastrService } from './common';
+import { CollapsibleWellComponent, TOASTR_TOKEN, Toastr } from './common';
+
+declare let toastr: Toastr;
 
 @NgModule({
   imports: [
@@ -46,7 +48,10 @@ import { CollapsibleWellComponent, ToastrService } from './common';
   ],
   providers: [
     EventService,
-    ToastrService,
+    {
+      provide: TOASTR_TOKEN,
+      useValue: toastr
+    },
     EventRouteActivator,
     EventListResolver,
     AuthService,
