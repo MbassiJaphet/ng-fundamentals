@@ -19,6 +19,7 @@ import {
   CreateSessionComponent,
   UpvoteComponent,
   VoterService,
+  LocationValidatorDirective,
 } from './events';
 
 import { EventsAppComponent } from './events-app.component';
@@ -44,6 +45,7 @@ declare let toastr: Toastr;
     SessionListComponent,
     UpvoteComponent,
     CreateEventComponent,
+    LocationValidatorDirective,
     CreateSessionComponent,
     NavBarComponent,
     SimpleModalComponent,
