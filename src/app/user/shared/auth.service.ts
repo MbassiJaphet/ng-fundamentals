@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core'
+import { IUser } from '../user.model';
 
 @Injectable()
 export class AuthService {
-  currentUser:any
+  currentUser?: IUser;
 
   loginUser(userName: string, password: string) {
     this.currentUser = {
       id: 1,
       userName: userName,
-      firstName: 'John',
-      lastName: 'Papa'
+      firstname: 'John',
+      lastname: 'Papa'
     }
   }
 
@@ -18,7 +19,7 @@ export class AuthService {
   }
 
   updateCurrentUser(firstName:string, lastName:string) {
-    this.currentUser.firstName = firstName
-    this.currentUser.lastName = lastName
+    this.currentUser!.firstname = firstName
+    this.currentUser!.lastname = lastName
   }
 }

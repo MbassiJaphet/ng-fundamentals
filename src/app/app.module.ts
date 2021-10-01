@@ -17,6 +17,8 @@ import {
   EventListResolver,
   EventRouteActivator,
   CreateSessionComponent,
+  UpvoteComponent,
+  VoterService,
 } from './events';
 
 import { EventsAppComponent } from './events-app.component';
@@ -40,6 +42,7 @@ declare let toastr: Toastr;
     EventDetailsComponent,
     EventThumbnailComponent,
     SessionListComponent,
+    UpvoteComponent,
     CreateEventComponent,
     CreateSessionComponent,
     NavBarComponent,
@@ -61,6 +64,7 @@ declare let toastr: Toastr;
     },
     EventRouteActivator,
     EventListResolver,
+    VoterService,
     AuthService,
     {
       provide: 'canDeactivateCreateEvent',
