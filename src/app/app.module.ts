@@ -21,6 +21,7 @@ import {
   UpvoteComponent,
   VoterService,
   LocationValidatorDirective,
+  EventResolver,
 } from './events';
 
 import { EventsAppComponent } from './events-app.component';
@@ -66,8 +67,8 @@ declare let toastr: Toastr;
       provide: JQ_TOKEN,
       useValue: jQuery
     },
-    EventRouteActivator,
     EventListResolver,
+    EventResolver,
     VoterService,
     AuthService,
     {
