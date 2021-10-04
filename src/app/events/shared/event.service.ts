@@ -35,7 +35,10 @@ export class EventService {
       .pipe(catchError(this.handleError<IEvent>('saveEvent')));
   }
 
-  searchSessions(searchTerm: String) {
+  searchSessions(searchTerm: String): Observable<ISession[]> {
+    return this.http.get<ISession[]>('/api/sessions/search?search='+ searchTerm)
+              .pipe(catchError(this.handleError<ISession[]>('searchSessions')));
+
     var term = searchTerm.toLocaleLowerCase();
     var results: ISession[] = [];
 
