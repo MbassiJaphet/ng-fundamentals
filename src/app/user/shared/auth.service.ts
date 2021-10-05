@@ -45,6 +45,13 @@ export class AuthService {
 
     let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
 
-    return this.http.put(`/api/users/${this.currentUser?.id}`, this.currentUser, options);
+    return this.http.put(`/api/users/${this.currentUser?.id}`, this.currentUser, options);  
+  }
+
+  logout() {
+    let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+
+    return this.http.post(`/api/logout`, {}, options)
+                      .pipe(tap<any>(() => {this.currentUser = undefined;}));  
   }
 }
