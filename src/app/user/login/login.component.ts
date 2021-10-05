@@ -9,9 +9,10 @@ import { Router } from '@angular/router';
   `]
 })
 export class LoginComponent {
-  username!: String;
-  password!: String;
+  username!: string;
+  password!: string;
   mouseoverLogin: boolean = false;
+  loginInvalid = false;
 
   constructor(private authService:AuthService, private router:Router) {
 
@@ -19,7 +20,13 @@ export class LoginComponent {
 
   login(formValues: any) {
     this.authService.loginUser(formValues.userName, formValues.password)
-    this.router.navigate(['events'])
+          .subscribe(resp => {
+            if(!resp) {
+              this.loginInvalid = true;
+            } else {
+              this.router.navigate(['events'])
+            }
+          });
   }
 
   cancel() {
