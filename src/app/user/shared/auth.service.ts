@@ -30,8 +30,17 @@ export class AuthService {
     return !!this.currentUser;
   }
 
+  checkAuthenticationStatus(): Observable<any> {
+    return this.http.get('/api/currentIdentity')
+                  .pipe(tap<any>( (data) => {
+                    if(data instanceof Object) {
+                      this.currentUser = <IUser> data;
+                    }
+                  }));  
+  }
+
   updateCurrentUser(firstName:string, lastName:string) {
-    this.currentUser!.firstname = firstName
-    this.currentUser!.lastname = lastName
+    this.currentUser!.firstName = firstName
+    this.currentUser!.lastName = lastName
   }
 }
