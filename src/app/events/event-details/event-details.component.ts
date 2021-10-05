@@ -21,7 +21,6 @@ export class EventDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.forEach(
       (params: Params) => {
-        console.log('Logging event id: ', )
         this.eventService.getEvent(+params['id']).subscribe(event => this.event = event);
       }
     )
