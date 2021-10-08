@@ -8,6 +8,7 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       // require('karma-edge-launcher'),
+      require('@chiragrupani/karma-chromium-edge-launcher'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
@@ -38,7 +39,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    // browsers: ['Chrome'],
+    browsers: ['Edge'],
     singleRun: false,
     restartOnFileChange: true
   });
