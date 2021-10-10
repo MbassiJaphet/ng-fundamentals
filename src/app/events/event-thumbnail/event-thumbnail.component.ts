@@ -31,7 +31,7 @@ import { IEvent } from '../shared';
     .well div { color: #bbb; }
   `]
 })
-export class EventThumbnailComponent implements OnInit {
+export class EventThumbnailComponent {
 
   @Input() event! : IEvent;
 
@@ -41,9 +41,6 @@ export class EventThumbnailComponent implements OnInit {
     if (this.event && this.event.time === '8:00 am')
     return {color: '#003000', 'font-weight': 'bold'}
     return {};
-  }
-
-  ngOnInit(): void {
   }
 
 }
